@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
   isCompatibleHandler: boolean;
   isCompatible: boolean;
   userAgentValue: string;
+  fban: boolean;
+  fbav: boolean;
+  instagram: boolean;
 
   constructor() {
     this.browserData = browser.detect();
@@ -19,6 +22,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.userAgentValue = navigator.userAgent;
+    this.fban = this.userAgentValue.indexOf("FBAN") > -1;
+    this.fbav = this.userAgentValue.indexOf("FBAV") > -1;
+    this.instagram = this.userAgentValue.indexOf("Instagram") > -1;
   }
 
   userAgent() {
