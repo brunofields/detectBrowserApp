@@ -1,0 +1,11 @@
+<h1>Informações do seu browser</h1>
+<p>Navegador: {{ browserData.name }}</p>
+<p>Sistema Operacional: {{ browserData.os }}</p>
+<p>Versão: {{ browserData.version }}</p>
+<p>Tipo: {{ browserData.type }}</p>
+<div class="container-button">
+    <button (click)="verifyBrowser()">Verificar Compatibilidade</button>
+</div>
+<div class="container-button">
+    <button (click)="userAgent()">Verificar pelo UserAgent</button>
+</div>
