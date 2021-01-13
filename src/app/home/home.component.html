@@ -3,9 +3,11 @@
 <p>Sistema Operacional: {{ browserData.os }}</p>
 <p>Versão: {{ browserData.version }}</p>
 <p>Tipo: {{ browserData.type }}</p>
-<div class="container-button">
-    <button (click)="verifyBrowser()">Verificar Compatibilidade</button>
-</div>
-<div class="container-button">
-    <button (click)="userAgent()">Verificar pelo UserAgent</button>
-</div>
+
+<h1>Informações UserAgent</h1>
+<p>{{ userAgentValue }}</p>
+<h1>Function IsApp()</h1>
+<p>isApp = {{isFacebookApp()}}</p>
+<!-- <div class="container-button">
+  <button (click)="verifyBrowser()">Verificar Compatibilidade</button>
+</div> -->

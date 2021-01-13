@@ -11,15 +11,23 @@ export class HomeComponent implements OnInit {
   browserData: BrowserModel;
   isCompatibleHandler: boolean;
   isCompatible: boolean;
+  userAgentValue: string;
 
   constructor() {
     this.browserData = browser.detect();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.userAgentValue = navigator.userAgent;
+  }
 
   userAgent() {
     alert(browser.browserName(navigator.userAgent));
+  }
+  
+  isFacebookApp() {
+    var ua = navigator.userAgent || navigator.vendor;
+    return (ua.indexOf("FBAN")) > -1 || (ua.indexOf("FBAV")) > -1 || (ua.indexOf("Instagram")) > -1;
   }
 
   verifyBrowser() {
