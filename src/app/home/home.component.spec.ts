@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { CorpoModel, HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -22,4 +22,13 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('deve ser criado um humano quando possui os dados corretos', () => {
+    component.criarHumano();
+    expect(component.corpo.cabeca).toEqual(1);
+    expect(component.corpo.tronco).toBe(1);
+    expect(component.corpo.membros).toBe(4);
+  });
+
+
 });
